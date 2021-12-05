@@ -10,6 +10,7 @@ const Logo = () => {
         <Text
               textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
               fontFamily={'heading'}
+              fontWeight={600}
               color={useColorModeValue('gray.800', 'white')}>
               Logo
         </Text>
