@@ -14,8 +14,9 @@ const AuthBtn = () => {
             <Button
               as={'a'}
               fontSize={'sm'}
-              fontWeight={400}
+              fontWeight={600}
               variant={'link'}
+              _hover={{color: 'gray.800'}}
               href={'#'}>
               Sign In
             </Button>
@@ -24,6 +25,7 @@ const AuthBtn = () => {
               display={{ base: 'none', md: 'inline-flex' }}
               fontSize={'sm'}
               fontWeight={600}
+              _hover={{bg: 'gray.50', color: 'gray.800'}}
               href={'#'}>
               Sign Up
             </Button>

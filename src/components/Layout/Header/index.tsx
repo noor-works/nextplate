@@ -25,7 +25,7 @@ export default function Header() {
     const { isOpen, onToggle } = useDisclosure();
   
     return (
-      <Box>
+      <Box position={'sticky'} top={0} zIndex={1}>
         <Container maxW={"5xl"}>
           <Flex
             bg={useColorModeValue('white', 'gray.800')}
