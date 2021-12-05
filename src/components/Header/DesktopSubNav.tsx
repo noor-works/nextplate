@@ -9,13 +9,12 @@ import {
   } from '@chakra-ui/react';
 
 import {
-    ChevronDownIcon,
     ChevronRightIcon,
   } from '@chakra-ui/icons';
 
 import {NavItem} from './NavData';
 
-const DesktopSubNav = ({ label, href, subLabel, children }: NavItem) => {
+const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
     return (
       <Link
         href={href}
@@ -31,13 +30,6 @@ const DesktopSubNav = ({ label, href, subLabel, children }: NavItem) => {
               _groupHover={{ color: 'pink.400' }}
               fontWeight={500}>
               {label}
-              {children && (
-                <Icon
-                as={ChevronDownIcon}
-                w={6}
-                h={6}
-                />
-              )}
             </Text>
             <Text fontSize={'sm'}>{subLabel}</Text>
           </Box>

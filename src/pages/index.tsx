@@ -7,7 +7,7 @@ const Home = () => {
       <Head>
         <title>Nextplate</title>
       </Head>
-      <Container maxW={"5xl"} p={5}>
+      <Container maxW={"5xl"} py={5}>
         <Heading>Nextplate Template</Heading>
         <Text>The opinionated starter for Next.js projects</Text>
       </Container>

@@ -2,11 +2,16 @@ import {
     Box,
     Stack,
     Link,
+    Icon,
     Popover,
     PopoverTrigger,
     PopoverContent,
     useColorModeValue,
   } from '@chakra-ui/react';
+
+import {
+    ChevronDownIcon,
+  } from '@chakra-ui/icons';
 
 import NAV_ITEMS from './NavData';
 
@@ -21,7 +26,7 @@ const DesktopNav = () => {
       <Stack direction={'row'} spacing={4}>
         {NAV_ITEMS.map((navItem) => (
           <Box key={navItem.label}>
-            <Popover trigger={'hover'} placement={'bottom-start'}>
+            <Popover trigger={'hover'} placement={'bottom-start'} gutter={0}>
               <PopoverTrigger>
                 <Link
                   p={2}
@@ -34,6 +39,14 @@ const DesktopNav = () => {
                     color: linkHoverColor,
                   }}>
                   {navItem.label}
+                  {navItem.children && (
+                    <Icon
+                      as={ChevronDownIcon}
+                      w={5}
+                      h={5}
+                      ml={1}
+                    />
+                  )}
                 </Link>
               </PopoverTrigger>
   

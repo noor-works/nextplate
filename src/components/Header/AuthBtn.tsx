@@ -20,15 +20,11 @@ const AuthBtn = () => {
               Sign In
             </Button>
             <Button
+              variant={'outline'}
               display={{ base: 'none', md: 'inline-flex' }}
               fontSize={'sm'}
               fontWeight={600}
-              color={'white'}
-              bg={'pink.400'}
-              href={'#'}
-              _hover={{
-                bg: 'pink.300',
-              }}>
+              href={'#'}>
               Sign Up
             </Button>
           </Stack>
