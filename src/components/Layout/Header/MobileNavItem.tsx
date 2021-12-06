@@ -13,6 +13,8 @@ import {
     ChevronDownIcon,
   } from '@chakra-ui/icons';
 
+import NextLink from 'next/link';
+
 import {NavItem} from './NavData';
 
 const MobileNavItem = ({ label, children, href }: NavItem) => {
@@ -20,10 +22,10 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
   
     return (
       <Stack spacing={4} onClick={children && onToggle}>
+        <NextLink href={href ?? '#'} passHref={true}>
         <Flex
           py={2}
           as={Link}
-          href={href ?? '#'}
           justify={'space-between'}
           align={'center'}
           _hover={{
@@ -44,6 +46,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
             />
           )}
         </Flex>
+        </NextLink>
   
         <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
           <Stack
@@ -55,9 +58,11 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
             align={'start'}>
             {children &&
               children.map((child) => (
-                <Link key={child.label} py={2} color={'gray.600'} _hover={{color: 'gray.800'}} href={child.href}>
-                  {child.label}
-                </Link>
+                <NextLink href={child.href ?? '#'} passHref={true}>
+                  <Link key={child.label} py={2} color={'gray.600'} _hover={{color: 'gray.800'}}>
+                    {child.label}
+                  </Link>
+                </NextLink>
               ))}
           </Stack>
         </Collapse>

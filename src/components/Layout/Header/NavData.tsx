@@ -12,7 +12,7 @@ interface NavItem {
         {
           label: 'Explore Design Work',
           subLabel: 'Trending Design to inspire you',
-          href: '#',
+          href: '/explore',
         },
         {
           label: 'New & Noteworthy',
@@ -38,11 +38,11 @@ interface NavItem {
     },
     {
       label: 'Learn Design',
-      href: '#',
+      href: '/learn',
     },
     {
       label: 'Hire Designers',
-      href: '#',
+      href: '/hire',
     },
   ];
 
