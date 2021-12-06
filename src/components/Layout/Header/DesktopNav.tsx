@@ -13,8 +13,6 @@ import {
     ChevronDownIcon,
   } from '@chakra-ui/icons';
 
-import NextLink from 'next/link';
-
 import NAV_ITEMS from './NavData';
 
 import DesktopSubNav from './DesktopSubNav';
@@ -30,29 +28,26 @@ const DesktopNav = () => {
           <Box key={navItem.label}>
             <Popover trigger={'hover'} placement={'bottom-start'} gutter={0}>
               <PopoverTrigger>
-                <Box>
-                  <NextLink href={navItem.href ?? '#'} passHref={true}>
-                    <Link
-                      p={2}
-                      fontSize={'sm'}
-                      fontWeight={500}
-                      color={linkColor}
-                      _hover={{
-                        textDecoration: 'none',
-                        color: linkHoverColor,
-                      }}>
-                      {navItem.label}
-                      {navItem.children && (
-                        <Icon
-                          as={ChevronDownIcon}
-                          w={5}
-                          h={5}
-                          ml={1}
-                        />
-                      )}
-                    </Link>
-                  </NextLink>
-                </Box>
+                <Link
+                  p={2}
+                  href={navItem.href ?? '#'}
+                  fontSize={'sm'}
+                  fontWeight={500}
+                  color={linkColor}
+                  _hover={{
+                    textDecoration: 'none',
+                    color: linkHoverColor,
+                  }}>
+                  {navItem.label}
+                  {navItem.children && (
+                    <Icon
+                      as={ChevronDownIcon}
+                      w={5}
+                      h={5}
+                      ml={1}
+                    />
+                  )}
+                </Link>
               </PopoverTrigger>
   
               {navItem.children && (
