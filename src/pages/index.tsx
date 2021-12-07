@@ -9,9 +9,7 @@ const Home = () => {
       <Head>
         <title>Nextplate</title>
       </Head>
-      <Container maxW={"5xl"} py={5}>
-        <Hero />
-      </Container>
+      <Hero />
     </>
   );
 };
