@@ -22,6 +22,7 @@ const AuthBtn = () => {
         </Button>
         <Button
           rounded={'full'}
+          display={{ base: 'none', md: 'inline-flex' }}
           fontSize={'sm'}
           fontWeight={600}
           px={6}
